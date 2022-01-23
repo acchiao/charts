@@ -20,6 +20,20 @@ jobs:
         with:
           directory: charts/galactus
 
+  kubeval:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: "Checkout ${{ github.ref }} [${{ github.sha }}]"
+        uses: actions/checkout@v2
+      - uses: azure/setup-helm@v1
+        with:
+          version: v3.7.2
+      - run: |
+          wget https://github.com/instrumenta/kubeval/releases/latest/download/kubeval-linux-amd64.tar.gz
+          tar xf kubeval-linux-amd64.tar.gz
+          cp kubeval /usr/local/bin
+      - run: helm template charts/galactus | kubeval
+
   ct-lint:
     runs-on: ubuntu-20.04
     steps:
