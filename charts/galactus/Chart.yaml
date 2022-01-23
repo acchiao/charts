@@ -1,0 +1,32 @@
+apiVersion: v2
+name: galactus
+version: 0.1.0
+kubeVersion: ">= 1.20.0-0"
+description: A Helm chart for papaya
+type: application
+keywords:
+  - galactus
+  - papaya
+home: https://github.com/acchiao/galactus
+sources:
+  - https://github.com/acchiao/galactus
+  - https://github.com/acchiao/papaya
+dependencies:
+  - name: postgresql
+    version: ~10.16.2
+    repository: https://charts.bitnami.com/bitnami
+    alias: postgresql
+    condition: postgresql.enabled
+  - name: redis
+    version: ~16.1.0
+    repository: https://charts.bitnami.com/bitnami
+    alias: redis
+    condition: redis.enabled
+  - name: meilisearch
+    version: ~0.1.24
+    repository: https://meilisearch.github.io/meilisearch-kubernetes
+    alias: meilisearch
+    condition: meilisearch.enabled
+icon: https://raw.githubusercontent.com/acchiao/galactus/main/chart-icon.png
+appVersion: "0.1.0"
+deprecated: false

@@ -1,0 +1,4 @@
+# chart dependencies
+**/charts/*.tgz
+charts/*/charts
+charts/*/requirements.lock
