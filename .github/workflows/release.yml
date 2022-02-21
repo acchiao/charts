@@ -1,8 +1,9 @@
 name: Release
 
 on:
-  release:
-    types: [released]
+  push:
+    branches:
+      - main
 
 jobs:
   release:
@@ -21,7 +22,7 @@ jobs:
       - name: Install Helm
         uses: azure/setup-helm@v1
         with:
-          version: v3.7.2
+          version: v3.8.0
 
       - name: Run chart-releaser
         uses: helm/chart-releaser-action@v1.2.1
