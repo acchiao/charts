@@ -19,6 +19,7 @@ jobs:
           helm dependency update charts/galactus
           helm lint charts/galactus
       - uses: stackrox/kube-linter-action@v1
+        continue-on-error: true
         with:
           directory: charts/galactus
 
