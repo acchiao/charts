@@ -80,12 +80,3 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
-
-postgresql:
-  enabled: false
-
-redis:
-  enabled: false
-
-meilisearch:
-  enabled: false

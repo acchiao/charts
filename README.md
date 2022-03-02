@@ -12,39 +12,10 @@
 
 ## Charts
 
-* [galactus](charts/galactus/): A Helm chart for [galactus]
+Add the raccoon repository to Helm:
 
-[galactus]: https://github.com/acchiao/galactus/
-
-## Usage
-
-Add the chart repository.
-
-```sh
+```shell
 helm repo add raccoon https://charts.raccoon.team
 helm repo update
-```
-
-To search the repository:
-
-```sh
 helm repo search raccoon
-````
-
-To install the charts:
-
-```sh
-helm install [RELEASE_NAME] raccoon/galactus
-```
-
-To upgrade the charts:
-
-```sh
-helm upgrade --install [RELEASE_NAME] raccoon/galactus
-```
-
-To uninstall the charts:
-
-```sh
-helm uninstall [RELEASE_NAME]
 ````
