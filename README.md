@@ -1,46 +1,20 @@
 # charts
 
+[![CI](https://github.com/acchiao/charts/actions/workflows/ci.yml/badge.svg)](https://github.com/acchiao/charts/actions/workflows/ci.yml)
+[![Release](https://github.com/acchiao/charts/actions/workflows/release.yml/badge.svg)](https://github.com/acchiao/charts/actions/workflows/release.yml)
+
 ## Prerequisites
 
-  * [Helm] ^3.7.0
+  * [Helm] ^3.8.0
 
 [Helm]: https://helm.sh/
 
 ## Charts
 
-* [galactus](charts/galactus/): A Helm chart for [papaya]
+Add the raccoon repository to Helm:
 
-[papaya]: https://github.com/acchiao/papaya/
-
-## Usage
-
-Add the chart repository.
-
-```sh
-helm repo add acchiao https://acchiao.github.io/charts
+```shell
+helm repo add raccoon https://charts.raccoon.team
 helm repo update
-```
-
-To search the repository:
-
-```sh
-helm repo search acchiao
-````
-
-To install the charts:
-
-```sh
-helm install [RELEASE_NAME] acchiao/galactus
-```
-
-To upgrade the charts:
-
-```sh
-helm upgrade --install [RELEASE_NAME] acchiao/galactus
-```
-
-To uninstall the charts:
-
-```sh
-helm uninstall [RELEASE_NAME]
+helm search repo raccoon
 ````
