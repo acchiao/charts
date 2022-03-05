@@ -2,7 +2,6 @@
 
 [![CI](https://github.com/acchiao/charts/actions/workflows/ci.yml/badge.svg)](https://github.com/acchiao/charts/actions/workflows/ci.yml)
 [![Release](https://github.com/acchiao/charts/actions/workflows/release.yml/badge.svg)](https://github.com/acchiao/charts/actions/workflows/release.yml)
-[![pages-build-deployment](https://github.com/acchiao/charts/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/acchiao/charts/actions/workflows/pages/pages-build-deployment)
 
 ## Prerequisites
 
@@ -17,5 +16,5 @@ Add the raccoon repository to Helm:
 ```shell
 helm repo add raccoon https://charts.raccoon.team
 helm repo update
-helm repo search raccoon
+helm search repo raccoon
 ````
